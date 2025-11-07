@@ -1,38 +1,109 @@
 .App {
-  text-align: center;
+  /* Unused now */
 }
 
+/* Unused */
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  /* Unused */
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  /* Unused */
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    /* Unused */
   }
 }
 
+/* Unused */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* Unused */
 }
 
+/* Unused */
 .App-link {
-  color: #61dafb;
+  /* Unused */
 }
 
+/* Unused */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Calculator Container */
+.calculator {
+  max-width: 300px;
+  margin: 50px auto;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Display */
+.display {
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 24px;
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* Button Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Buttons */
+button {
+  height: 60px;
+  font-size: 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #d0d0d0;
+}
+
+button:active {
+  background-color: #c0c0c0;
+}
+
+/* Make number buttons slightly different */
+button:nth-child(-n+10), button:nth-child(14), button:nth-child(15), button:nth-child(16) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .calculator {
+    max-width: 90%;
+  }
+  button {
+    height: 50px;
+    font-size: 18px;
+  }
+  .display {
+    font-size: 20px;
+    height: 40px;
   }
 }
